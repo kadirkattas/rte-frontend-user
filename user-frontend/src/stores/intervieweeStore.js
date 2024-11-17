@@ -16,6 +16,8 @@ const useIntervieweeStore = create((set) => ({
 
   fetchInterviewQuestions: async (id) => {
     try {
+      console.log("id: ", id);
+      console.log("Url: ", import.meta.env.VITE_BACKEND_API_URL);
       const response = await axios.get(
         `/interview-room/get-interview-questions-with-url/${id}`,
         {
