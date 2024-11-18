@@ -65,7 +65,7 @@ const VideoRecorder = forwardRef(({ isRecording }, ref) => {
         const videoBlob = new Blob(localVideoChunks, { type: mimeType });
         setVideoChunks([]); // Reset video chunks
         const { time } = useIntervieweeStore.getState(); // time değerini doğrudan store'dan alıyoruz
-        console.log("Zaman kayıtları (stopRecording): ", time);
+        "Zaman kayıtları (stopRecording): ", time;
         await saveInterviewVideo(videoBlob, id, time); // Save video to the backend
         setUploadComplete(true); // Yükleme tamamlandığında durum güncelle
       };
